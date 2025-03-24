@@ -23,7 +23,7 @@ const Body = () =>
         return <h1>Loading...</h1>;
     }
     return (
-        <div className="product-container">
+        <div className="my-10 flex flex-wrap justify-center items-center gap-6">
             {
                 product.map((products) =>
                 {
