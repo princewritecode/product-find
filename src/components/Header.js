@@ -4,7 +4,7 @@ const Header = () =>
 {
     const [hamburgerMenu, setHamburgerMenu] = useState(true);
     return (
-        <div className="bg-[#F3EEE8] flex justify-between m-0 px-4 items-center relative sticky top-0 ">
+        <div className="bg-[#F3EEE8] flex justify-between m-0 px-4 items-center ">
 
             <div className="logo-container ">
                 <img className="w-36 rounded-[50%]" src="https://images-platform.99static.com//c1rUMjustRTu74ku1H_E2ZE-ku8=/544x246:1493x1195/fit-in/500x500/99designs-contests-attachments/100/100984/attachment_100984026"></img>

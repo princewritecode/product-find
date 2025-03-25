@@ -18,11 +18,9 @@ const AppLayOut = () =>
         </>
     );
 };
-
 const appRouter = createBrowserRouter([
     {
         path: '/', element: <AppLayOut></AppLayOut>,
-
         children: [
             { path: '/', element: <Body></Body> },
             { path: '/about', element: <Suspense> <About></About> </Suspense> },
@@ -32,6 +30,5 @@ const appRouter = createBrowserRouter([
         , errorElement: <Error></Error>
     }
 ]);
-
 const root = createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={appRouter}></RouterProvider>);
