@@ -49,19 +49,19 @@ const Header = () =>
             {hamburgerMenu && (
                 <div className="absolute top-full left-0 w-full bg-[#F3EEE8] shadow-md md:hidden">
                     <ul className="flex flex-col space-y-4 p-4">
-                        <Link to="/" className="text-gray-700 hover:text-gray-900 font-medium">
+                        <Link to="/" className="hover:cursor-pointer text-gray-700 hover:text-gray-900 font-medium">
                             Home
                         </Link>
-                        <Link to="/about" className="text-gray-700 hover:text-gray-900 font-medium">
+                        <Link to="/about" className="text-gray-700 hover:text-gray-900 font-medium hover:cursor-pointer">
                             About
                         </Link>
-                        <Link to="/contact" className="text-gray-700 hover:text-gray-900 font-medium">
+                        <Link to="/contact" className="text-gray-700 hover:text-gray-900 font-medium hover:cursor-pointer">
                             Contact
                         </Link>
-                        <Link to="/cart" className="text-gray-700 hover:text-gray-900 font-medium">
+                        <Link to="/cart" className="text-gray-700 hover:text-gray-900 font-medium hover:cursor-pointer">
                             Cart
                         </Link>
-                        <button className="bg-[#E0CFCB] text-white py-2 px-4 rounded-lg hover:bg-[#D1B7B3] transition">
+                        <button className=" hover:cursor-pointer bg-[#E0CFCB] text-white py-2 px-4 rounded-lg hover:bg-[#D1B7B3] transition">
                             Login
                         </button>
                     </ul>
