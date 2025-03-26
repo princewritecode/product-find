@@ -28,12 +28,45 @@ const Body = () =>
     return (
         <>
 
-            <div class="flex space-x-4 justify-center my-6">
-                <button class="bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition">Beauty</button>
-                <button class="bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition">Fragrance</button>
-                <button class="bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition">Furniture</button>
-                <button class="bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition">All Items</button>
-            </div>
+            <div className="flex space-x-4 justify-center my-6">
+                <button className="hover:cursor-pointer bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition"
+                    onClick={() =>
+                    {
+                        const filterBeauty = productFilter.filter((prod) =>
+                        {
+                            return (prod.category === "beauty");
+                        });
+                        setProduct(filterBeauty);
+                    }}>Beauty</button>
+                <button className="hover:cursor-pointer bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition"
+                    onClick={() =>
+                    {
+                        const filterBeauty = productFilter.filter((prod) =>
+                        {
+                            return (prod.category === "fragrances");
+                        });
+                        setProduct(filterBeauty);
+                    }}  >Fragrance</button>
+                <button className="hover:cursor-pointer bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition" onClick={() =>
+                {
+                    const filterBeauty = productFilter.filter((prod) =>
+                    {
+                        return (prod.category === "furniture");
+                    });
+                    setProduct(filterBeauty);
+                }}>Furniture</button>
+                <button className="hover:cursor-pointer bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition"
+
+                    onClick={() =>
+                    {
+                        const allItems = productFilter.filter((prod) =>
+                        {
+                            return (prod.title);
+                        });
+                        setProduct(allItems);
+                    }}
+                >All Items</button>
+            </div >
 
             <div className="flex justify-center items-center min-h-4 my-4">
                 <div className="relative w-full max-w-md">
@@ -59,7 +92,6 @@ const Body = () =>
                                 return (prod.title.toLowerCase().includes(inputValue.toLowerCase()));
                             });
                             setProduct(prodFilterList);
-
                         }}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
