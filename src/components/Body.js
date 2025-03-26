@@ -7,7 +7,6 @@ const Body = () =>
     const [productFilter, setProductFilter] = useState([]);
     const InStockOrNot = inStock(ProductCard);
     const [inputValue, setInputValue] = useState('');
-
     useEffect(() =>
     {
         fetchData();
@@ -110,20 +109,18 @@ const Body = () =>
                     </button>
                 </div>
             </div>
-            <div className="my-10 flex flex-wrap justify-center items-center gap-6 ">
+            <div className="my-10 flex flex-wrap justify-center items-center gap-6">
                 {
-                    product.map((products) =>
-                    {
-                        return (<>
-
-                            <Link key={products.id} to={`/products/${products.id}`}>
-                                {/* if the product is out of stock show it using higher order component which takes component as input and return enhanced  version of the input */}
-                                {
-                                    (products.availabilityStatus === "Low Stock") ? <InStockOrNot prod={products}></InStockOrNot> : <ProductCard prod={products}></ProductCard>
-                                }
-                            </Link>
-                        </>);
-                    })
+                    product.map((products) => (
+                        <Link key={products.id} to={`/products/${products.id}`}>
+                            {/* if the product is out of stock show it using higher order component which takes component as input and return enhanced version of the input */}
+                            {
+                                (products.availabilityStatus === "Low Stock")
+                                    ? <InStockOrNot prod={products} />
+                                    : <ProductCard prod={products} />
+                            }
+                        </Link>
+                    ))
                 }
             </div>
         </>
