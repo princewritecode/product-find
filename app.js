@@ -7,7 +7,6 @@ import ProductsInfo from "./src/components/ProductsInfo";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import ProductsInfo from "./src/components/ProductsInfo";
 import { lazy, Suspense } from "react";
-
 const About = lazy(() => import('./src/components/About'));
 const AppLayOut = () =>
 {
