@@ -7,6 +7,7 @@ import ProductsInfo from "./src/components/ProductsInfo";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import ProductsInfo from "./src/components/ProductsInfo";
 import { lazy, Suspense } from "react";
+import Footer from "./src/components/Footer";
 const About = lazy(() => import('./src/components/About'));
 const AppLayOut = () =>
 {
@@ -14,6 +15,7 @@ const AppLayOut = () =>
         <>
             <Header></Header>
             <Outlet></Outlet>
+            <Footer></Footer>
         </>
     );
 };

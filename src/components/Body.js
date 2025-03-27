@@ -17,7 +17,6 @@ const Body = () =>
         const responseData = await data.json();
         setProduct(responseData.products);
         setProductFilter(responseData.products);
-        console.log(responseData.products);
 
     };
     if (product.length === null)
@@ -26,7 +25,6 @@ const Body = () =>
     }
     return (
         <>
-
             <div className="flex space-x-4 justify-center my-6">
                 <button className="hover:cursor-pointer bg-[#F3EEE8] text-black py-2 px-4 rounded-lg hover:bg-[#E0CFCB] transition"
                     onClick={() =>
