@@ -49,9 +49,9 @@ const ProductsInfo = () =>
                 <p className='font-bold text-2xl my-8'>Reviews</p>
                 {
                     reviews.map(
-                        (productReview) =>
+                        (productReview, index) =>
                         {
-                            return <ProductReviews key={productReview.id} review={productReview}></ProductReviews>;
+                            return <ProductReviews key={index} review={productReview}></ProductReviews>;
                         })
                 }
                 <button className="" >Add to Cart</button>
