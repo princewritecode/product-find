@@ -112,11 +112,14 @@ const Body = () =>
                     product.map((products) => (
                         <Link key={products.id} to={`/products/${products.id}`}>
                             {/* if the product is out of stock show it using higher order component which takes component as input and return enhanced version of the input */}
-                            {
+                            {/* {
                                 (products.availabilityStatus === "Low Stock")
                                     ? <InStockOrNot prod={products} />
                                     : <ProductCard prod={products} />
-                            }
+                            } */}
+
+                            <InStockOrNot prod={products}></InStockOrNot>
+
                         </Link>
                     ))
                 }

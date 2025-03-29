@@ -15,9 +15,10 @@ export const inStock = (ProductCard) =>
 {
     return (props) =>
     {
+
         return (
             <div>
-                <label className="absolute bg-black text-white m-2 p-2 rounded-sm">Low Stock</label>
+                <label className="absolute bg-black text-white m-2 p-2 rounded-sm">{props.prod.availabilityStatus}</label>
                 <ProductCard {...props}></ProductCard>
             </div>
         );
